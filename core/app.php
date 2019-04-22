@@ -34,6 +34,8 @@ class App
                 require_once APPPATH . 'controllers/' . str_replace("Controller", "", $className) . ".php";
             } elseif (substr($className, -5) == "Model"){
                 require_once  APPPATH . 'models/' . str_replace("Model", "", $className) . ".php";
+            } elseif (substr($className, -3) == "Dao"){
+                require_once APPPATH . 'models/daos/' . str_replace("Dao", "", $className) . ".php";
             }
         });
     }

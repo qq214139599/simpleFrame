@@ -1,12 +1,16 @@
 <?php
 class userModel extends baseModel
 {
+    protected $userDao;
+
     public function __construct()
     {
+        parent::__construct();
+        $this->userDao = new userDao();
     }
 
     public function info()
     {
-        echo "hello world!";
+        return "userModel::info();" . $this->userDao->info();
     }
 }

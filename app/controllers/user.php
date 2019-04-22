@@ -10,7 +10,13 @@ class userController extends baseController
 
     public function info()
     {
-        $this->userModel->info();
+        echo "userControllers::info();" . $this->userModel->info();
+    }
+
+    public function test()
+    {
+        //测试调用公共函数
+        test();
     }
 
 }
